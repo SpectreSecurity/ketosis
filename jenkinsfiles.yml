@@ -51,7 +51,7 @@ make -j3 -f makefile.unix'''
         stage('Windows Wallet') {
           steps {
             sh '''export PATH=/mnt/mxe/usr/bin:$PATH
-cd /mnt/KETOsis-Master
+cd /mnt/ketosis
 ./compile-keto.sh'''
           }
         }
@@ -79,7 +79,7 @@ mkdir -p $JOB_NAME/$BUILD_NUMBER
         }
         stage('Move Windows QT') {
           steps {
-            sh 'cp /mnt/KETOsis-Master/release/ketosis-qt.exe /var/www/html/dir/$JOB_NAME/$BUILD_NUMBER/KETOsis-qt.exe'
+            sh 'cp /mnt/ketosis/release/ketosis-qt.exe /var/www/html/dir/$JOB_NAME/$BUILD_NUMBER/KETOsis-qt.exe'
           }
         }
       }
