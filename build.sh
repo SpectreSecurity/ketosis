@@ -28,7 +28,7 @@ if [ ! -e "$file" ]; then
 	# Now assume running outside and repo has been downloaded and named ketosis
 	if [ ! -e "$repo/ketosis/build.sh" ]; then
 		# if not, download the repo and name it ketosis
-		git clone https://github.com/KETOsisDev/KETOsis-Master.git ketosis
+		git clone https://github.com/SpectreSecurity/ketosis.git ketosis
 	fi
 	repo=$repo/ketosis
 	file=$repo/src/ketosisd
